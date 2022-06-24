@@ -1,27 +1,21 @@
-import { Box, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react'
 
 export const AboutMe = () => (
-  <Stack
-    direction="row"
-    width={{ base: '90vw', md: '768px' }}
-    alignItems="center"
-  >
-    <Stack>
-      <Box width="64px">
-        <Image
-          boxSize="64px"
-          borderRadius="100%"
-          objectFit="cover"
-          src="/assets/avatar.jpg"
-          alt="Dan Abramov"
-        />
-      </Box>
-    </Stack>
+  <HStack>
+    <Box width={16}>
+      <Image
+        boxSize={16}
+        rounded={100}
+        objectFit={'cover'}
+        src={'/assets/avatar.jpg'}
+        alt="Sushin-ya"
+      />
+    </Box>
     <Box>
-      <Text fontSize="sm">Personal blog by Sushin-ya.</Text>
-      <Text fontSize="sm">
+      <Text fontSize={'sm'}>Personal blog by Sushin-ya.</Text>
+      <Text fontSize={'sm'}>
         Interested in learning about front-end technology.
       </Text>
     </Box>
-  </Stack>
+  </HStack>
 )

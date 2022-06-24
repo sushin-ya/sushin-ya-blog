@@ -8,7 +8,7 @@ import { Responsive } from '../Responsive'
 
 export const Header = () => (
   <Stack mb={16}>
-    <HStack as={'header'} pt={10} pb={5}>
+    <HStack as={'header'} pt={12} pb={[0, 10]}>
       <Title />
       <Spacer />
       <Stack

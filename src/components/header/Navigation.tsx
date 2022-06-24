@@ -1,15 +1,9 @@
-import { Flex, Link as ChakraLink } from '@chakra-ui/react'
+import { HStack, Link as ChakraLink } from '@chakra-ui/react'
 
 export const Navigation = () => (
-  <Flex
-    as="nav"
-    flexDirection={{ base: 'column', md: 'row' }}
-    justifyContent="space-between"
-    alignItems={{ base: 'flex-start', md: 'center' }}
-    gridGap="3vw"
-  >
-    <ChakraLink>About</ChakraLink>
-    <ChakraLink>Blog</ChakraLink>
-    <ChakraLink>Search</ChakraLink>
-  </Flex>
+  <HStack as={'nav'} spacing={4}>
+    <ChakraLink href="/about">About</ChakraLink>
+    <ChakraLink href="/blog">Blog</ChakraLink>
+    <ChakraLink href="/search">Search</ChakraLink>
+  </HStack>
 )

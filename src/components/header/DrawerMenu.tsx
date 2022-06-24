@@ -1,5 +1,4 @@
 import {
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -8,6 +7,9 @@ import {
   DrawerOverlay,
   IconButton,
   useDisclosure,
+  VStack,
+  Link as ChakraLink,
+  Stack,
 } from '@chakra-ui/react'
 import { useRef } from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -37,7 +39,11 @@ export const DrawerMenu = () => {
             <DrawerCloseButton />
             <DrawerHeader>Menu</DrawerHeader>
             <DrawerBody>
-              <Navigation />
+              <Stack as={'nav'} spacing={4}>
+                <ChakraLink href="/about">About</ChakraLink>
+                <ChakraLink href="/blog">Blog</ChakraLink>
+                <ChakraLink href="/search">Search</ChakraLink>
+              </Stack>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>

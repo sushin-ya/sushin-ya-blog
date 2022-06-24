@@ -2,6 +2,15 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
+// FIXME: 下は削除
+import remark from 'remark'
+import html from 'remark-html'
+import gfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import prism from 'remark-prism'
+import unified from 'unified'
+import remarkStringify from 'remark-stringify/lib'
+
 const postsDirectory = join(process.cwd(), '_posts')
 
 export function getPostSlugs() {
@@ -13,6 +22,30 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
+
+  // FIXME: test
+  const markdown = fs.readFileSync(
+    '/Users/otsukaryutaro/Documents/environment_nextjs/sushinya-blog/text.md',
+    'utf8'
+  )
+  const result = matter(markdown)
+  console.log({ result })
+
+  const c = remark()
+    .use(gfm)
+    .use(html, { sanitize: false })
+    .use(prism)
+    .process(result.content)
+  const d = unified()
+    .use(remarkParse as any)
+    .use(remarkStringify)
+    .use(html, { sanitize: false })
+    .use(prism)
+    .process(result.content)
+
+  console.log({ c, d })
+
+  // FIXME: test end
 
   type Items = {
     [key: string]: string

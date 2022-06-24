@@ -1,19 +1,18 @@
 import Layout from '@/components/Layout'
 import { PostDetail } from '@/components/posts/detail/PostDetail'
 import { getAllPosts, getPostBySlug } from 'lib/api'
+import PostType from '../../types/post'
 import remark from 'remark'
 import html from 'remark-html'
 import gfm from 'remark-gfm'
 // @ts-ignore
 import prism from 'remark-prism'
-import PostType from '../../types/post'
 
 type Props = {
   post: PostType
 }
 
 const PostPage = ({ post }: Props) => {
-  console.log({ post })
   return (
     <Layout hasAboutMe={false}>
       <PostDetail post={post} />
@@ -42,10 +41,8 @@ export async function getStaticProps({ params }: Params) {
   const content = await remark()
     .use(gfm)
     .use(prism)
-    .use(html)
+    .use(html, { sanitize: false })
     .process(post.content)
-
-  console.log({ content })
 
   return {
     props: {

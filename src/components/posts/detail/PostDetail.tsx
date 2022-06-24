@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   chakra,
   Flex,
@@ -20,7 +21,6 @@ import unified from 'unified'
 import rehypeParse from 'rehype-parse'
 import rehypeReact from 'rehype-react'
 import rehypeSlug from 'rehype-slug'
-import { createElement } from 'react'
 
 type Props = {
   post: PostType
@@ -138,12 +138,11 @@ const ContentDiv = (props: any) => {
 }
 
 export const PostDetail = ({ post }: Props) => {
-  console.log({ content: post.content })
   const content = unified()
     .use(rehypeParse, { fragment: true })
     .use(rehypeSlug)
     .use(rehypeReact, {
-      createElement,
+      createElement: React.createElement,
       components: {
         h2: ContentH2,
         h3: ContentH3,
@@ -159,8 +158,6 @@ export const PostDetail = ({ post }: Props) => {
       },
     })
     .processSync(post.content)
-
-  console.log({ content })
 
   return (
     <>

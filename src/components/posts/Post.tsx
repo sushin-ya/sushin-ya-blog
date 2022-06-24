@@ -1,4 +1,4 @@
-import { Text, Heading, HStack, Stack } from '@chakra-ui/react'
+import { Text, Heading, HStack, Stack, Link } from '@chakra-ui/react'
 import dayjs from 'dayjs'
 import PostType from '../../types/post'
 
@@ -8,7 +8,9 @@ type Props = {
 
 export const Post = ({ post }: Props) => (
   <Stack direction={'column'} gap={2}>
-    <Heading fontSize={'2xl'}>{post.title}</Heading>
+    <Link href={`/posts/${post.slug}`}>
+      <Heading fontSize={'2xl'}>{post.title}</Heading>
+    </Link>
     <HStack gap={2}>
       <Text>{dayjs(post.date).format('MMMM D, YYYY')}</Text>
       <Text>🍵🍵🍵</Text>

@@ -5,6 +5,7 @@ import {
   List,
   ListIcon,
   ListItem,
+  Heading,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
@@ -14,10 +15,12 @@ import { Main } from '../components/Main'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
+import { Header } from '../components/header/Header'
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
+    <Header />
+    {/* <Hero />
     <Main>
       <Text color="text">
         Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
@@ -49,7 +52,7 @@ const Index = () => (
     <Footer>
       <Text>Next ❤️ Chakra</Text>
     </Footer>
-    <CTA />
+    <CTA /> */}
   </Container>
 )
 

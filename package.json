@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.2",
@@ -19,6 +20,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",

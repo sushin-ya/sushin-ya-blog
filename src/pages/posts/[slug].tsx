@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout'
 import { PostDetail } from '@/components/posts/detail/PostDetail'
 import { getAllPosts, getPostBySlug } from 'lib/api'
-import { posts } from '../../../mock/posts'
 import remark from 'remark'
 import html from 'remark-html'
 import gfm from 'remark-gfm'
@@ -17,7 +16,7 @@ const PostPage = ({ post }: Props) => {
   console.log({ post })
   return (
     <Layout hasAboutMe={false}>
-      <PostDetail post={posts[0]} />
+      <PostDetail post={post} />
     </Layout>
   )
 }

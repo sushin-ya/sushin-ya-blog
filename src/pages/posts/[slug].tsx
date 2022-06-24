@@ -1,9 +1,10 @@
 import Layout from '@/components/Layout'
-import { Text } from '@chakra-ui/react'
+import { PostDetail } from '@/components/posts/detail/PostDetail'
+import { posts } from '../../../mock/posts'
 
 const PostPage = () => (
   <Layout hasAboutMe={false}>
-    <Text>posts</Text>
+    <PostDetail post={posts[0]} />
   </Layout>
 )
 

@@ -1,11 +1,15 @@
-import { Heading, HStack, Text } from '@chakra-ui/react'
+import { Heading, HStack, Stack, Text } from '@chakra-ui/react'
 
 export const Title = () => (
-  <HStack direction={'row'} alignItems={'flex-end'}>
+  <Stack
+    direction={['column', 'row']}
+    alignItems={['center', 'flex-end']}
+    spacing={[1, 2]}
+  >
     <Heading fontSize="3xl">🍣🐈 Sushin-ya Blog</Heading>
     <Text fontSize="xl" display={['none', 'block']}>
       |
     </Text>
     <Text>frontend engineer</Text>
-  </HStack>
+  </Stack>
 )

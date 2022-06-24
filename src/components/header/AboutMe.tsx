@@ -12,7 +12,7 @@ export const AboutMe = () => (
           boxSize="64px"
           borderRadius="100%"
           objectFit="cover"
-          src="/avatar.jpg"
+          src="/assets/avatar.jpg"
           alt="Dan Abramov"
         />
       </Box>

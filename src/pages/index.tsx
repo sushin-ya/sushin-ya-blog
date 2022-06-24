@@ -18,30 +18,12 @@ import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/footer/Footer'
 import { Header } from '../components/header/Header'
+import { Posts } from '../components/posts/Posts'
 
 const Index = () => (
   <Container>
     <Header />
-    {/* <Posts /> */}
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
-    <Text>POSTs</Text>
+    <Posts />
     <Footer />
 
     {/* <Hero />

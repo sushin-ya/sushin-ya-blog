@@ -7,7 +7,7 @@ import { Title } from '@/components/header/Title'
 import { Responsive } from '../Responsive'
 
 export const Header = () => (
-  <Stack mb="10vh">
+  <Stack mb={16}>
     <HStack as={'header'} pt={10} pb={5}>
       <Title />
       <Spacer />

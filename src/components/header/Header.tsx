@@ -2,8 +2,8 @@ import { Box, Flex, Stack } from '@chakra-ui/react'
 import { DarkModeSwitch } from '../DarkModeSwitch'
 import { AboutMe } from './AboutMe'
 import { DrawerMenu } from './DrawerMenu'
-import { HeaderTitle } from './HeaderTitle'
 import { Navigation } from './Navigation'
+import { Title } from '@/components/header/Title'
 
 export const Header = () => (
   <Stack mb="10vh">
@@ -16,7 +16,7 @@ export const Header = () => (
       justifyContent="space-between"
       alignItems="center"
     >
-      <HeaderTitle />
+      <Title />
       <Stack
         alignItems="center"
         gridGap="3vw"

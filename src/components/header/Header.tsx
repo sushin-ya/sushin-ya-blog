@@ -14,7 +14,11 @@ export const Header = () => (
     alignItems="center"
   >
     <HeaderTitle />
-    <Stack gridGap="3vw" direction={{ base: 'column-reverse', sm: 'row' }}>
+    <Stack
+      alignItems="center"
+      gridGap="3vw"
+      direction={{ base: 'column-reverse', sm: 'row' }}
+    >
       <Box display={{ base: 'none', md: 'block' }}>
         <Navigation />
       </Box>

@@ -1,4 +1,3 @@
-import { HamburgerIcon } from '@chakra-ui/icons'
 import { Box, Flex, FlexProps, Text, Icon } from '@chakra-ui/react'
 import { FiGithub, FiTwitter } from 'react-icons/fi'
 

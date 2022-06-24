@@ -1,4 +1,4 @@
-import { Heading, HStack, Stack, Text } from '@chakra-ui/react'
+import { Heading, Stack, Text } from '@chakra-ui/react'
 
 export const Title = () => (
   <Stack

@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Spacer, Stack } from '@chakra-ui/react'
+import { HStack, Spacer, Stack } from '@chakra-ui/react'
 import { DarkModeSwitch } from '../DarkModeSwitch'
 import { AboutMe } from './AboutMe'
 import { DrawerMenu } from './DrawerMenu'

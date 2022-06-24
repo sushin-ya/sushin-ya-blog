@@ -7,13 +7,11 @@ import {
   DrawerOverlay,
   IconButton,
   useDisclosure,
-  VStack,
   Link as ChakraLink,
   Stack,
 } from '@chakra-ui/react'
 import { useRef } from 'react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { Navigation } from './Navigation'
 
 export const DrawerMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()

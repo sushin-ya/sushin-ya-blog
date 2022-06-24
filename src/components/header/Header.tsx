@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import { DrawerMenu } from './DrawerMenu'
+import { HeaderTitle } from './HeaderTitle'
 import { Navigation } from './Navigation'
 
 export const Header = () => (
@@ -11,16 +12,7 @@ export const Header = () => (
     justifyContent="space-between"
     alignItems="center"
   >
-    <Flex
-      flexWrap={{ base: 'wrap', md: 'nowrap' }}
-      justifyContent={{ base: 'center', md: 'flex-start' }}
-      alignItems="end"
-      gap="1vw"
-    >
-      <Heading fontSize="2xl">🍣🐈 Sushin-ya Blog</Heading>
-      <Text display={{ base: 'none', sm: 'block' }}>|</Text>
-      <Text>frontend engineer</Text>
-    </Flex>
+    <HeaderTitle />
     <Box display={{ base: 'none', md: 'block' }}>
       <Navigation />
     </Box>

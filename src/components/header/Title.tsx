@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from '@chakra-ui/react'
+import { Heading, Link, Stack, Text } from '@chakra-ui/react'
 
 export const Title = () => (
   <Stack
@@ -6,7 +6,9 @@ export const Title = () => (
     alignItems={['center', 'flex-end']}
     spacing={[1, 2]}
   >
-    <Heading fontSize="3xl">🍣🐈 Sushin-ya Blog</Heading>
+    <Link href={'/'}>
+      <Heading fontSize="3xl">🍣🐈 Sushin-ya Blog</Heading>
+    </Link>
     <Text fontSize="xl" display={['none', 'block']}>
       |
     </Text>

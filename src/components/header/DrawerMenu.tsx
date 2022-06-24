@@ -6,6 +6,7 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  IconButton,
   useDisclosure,
 } from '@chakra-ui/react'
 import { useRef } from 'react'
@@ -18,9 +19,13 @@ export const DrawerMenu = () => {
 
   return (
     <>
-      <Button ref={btnRef} onClick={onOpen}>
-        <HamburgerIcon w={6} h={6} />
-      </Button>
+      <IconButton
+        ref={btnRef}
+        icon={<HamburgerIcon w={6} h={6} />}
+        aria-label="Toggle Theme"
+        colorScheme="green"
+        onClick={onOpen}
+      />
       <Drawer
         isOpen={isOpen}
         onClose={onClose}

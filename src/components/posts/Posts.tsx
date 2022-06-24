@@ -1,5 +1,4 @@
-import { FlexProps, List, ListItem, Text } from '@chakra-ui/react'
-import { posts } from '../../../mock/posts'
+import { List, ListItem, Spacer } from '@chakra-ui/react'
 import PostType from '../../types/post'
 import { Empty } from './Empty'
 import { Post } from './Post'
@@ -8,9 +7,9 @@ type Props = {
   posts: PostType[]
 }
 
-export const Posts = () => {
+export const Posts = ({ posts }: Props) => {
   return (
-    <List width={{ base: '90vw', md: '768px' }} spacing={20}>
+    <List spacing={16}>
       {posts.length > 0 ? (
         posts.map((post, index) => (
           <ListItem key={index}>
@@ -18,7 +17,11 @@ export const Posts = () => {
           </ListItem>
         ))
       ) : (
-        <Empty />
+        <>
+          <Spacer></Spacer>
+          <Empty />
+          <Spacer></Spacer>
+        </>
       )}
     </List>
   )

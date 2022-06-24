@@ -1,9 +1,10 @@
-import { Container, Text } from '@chakra-ui/react'
+import Layout from '@/components/Layout'
+import { Text } from '@chakra-ui/react'
 
 const PostPage = () => (
-  <Container>
-    <Text>post page</Text>
-  </Container>
+  <Layout hasAboutMe={false}>
+    <Text>posts</Text>
+  </Layout>
 )
 
 export default PostPage

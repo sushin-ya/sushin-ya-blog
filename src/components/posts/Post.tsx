@@ -1,5 +1,14 @@
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { Box, Flex, FlexProps, Text, Icon, List } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  FlexProps,
+  Text,
+  Icon,
+  List,
+  Heading,
+} from '@chakra-ui/react'
+import dayjs from 'dayjs'
 import { FiGithub, FiTwitter } from 'react-icons/fi'
 import PostType from '../../types/post'
 
@@ -8,9 +17,13 @@ type Props = {
 }
 
 export const Post = ({ post }: Props) => (
-  <Box>
-    <Text>{post.title}</Text>
-    <Text>{post.author.name}</Text>
+  <Flex direction="column" gap={2}>
+    <Heading fontSize="2xl">{post.title}</Heading>
+    <Flex gap={3}>
+      <Text>{dayjs(post.date).format('MMMM D, YYYY')}</Text>
+      <Text>🍵🍵🍵</Text>
+      <Text>5 min read</Text>
+    </Flex>
     <Text>{post.excerpt}</Text>
-  </Box>
+  </Flex>
 )

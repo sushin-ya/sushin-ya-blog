@@ -9,7 +9,7 @@ type Props = {
 
 export const Posts = () => {
   return (
-    <List>
+    <List width={{ base: '90vw', md: '768px' }} spacing={20}>
       {posts.length > 0 &&
         posts.map((post, index) => (
           <ListItem key={index}>

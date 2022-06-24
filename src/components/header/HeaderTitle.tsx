@@ -7,7 +7,7 @@ export const HeaderTitle = () => (
     alignItems="end"
     gap="1vw"
   >
-    <Heading fontSize="2xl">🍣🐈 Sushin-ya Blog</Heading>
+    <Heading fontSize="3xl">🍣🐈 Sushin-ya Blog</Heading>
     <Text display={{ base: 'none', sm: 'block' }}>|</Text>
     <Text>frontend engineer</Text>
   </Flex>

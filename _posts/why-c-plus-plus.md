@@ -14,6 +14,11 @@ ogImage:
 
 ちょっと C++ への熱を冷まさないために、C++ のテンプレートについてまとめてみたいと思います。
 
+```bash
+$ echo "今日も元気です" | japawrap -open '<span style="display: inline-block;">' -close "</span>"
+<span style="display: inline-block;">今日も</span><span style="display: inline-block;">元気です</span>
+```
+
 ## 対象
 
 - C++ のテンプレートが怖い人
@@ -40,7 +45,7 @@ OCaml や Haskell だと多相とか。
 
 まずは `int` 型のスタックを定義してみます。
 
-```
+```c
 #define MAX\_ELEM 10
 
 class int\_stack {

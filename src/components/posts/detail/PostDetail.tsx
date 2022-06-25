@@ -4,7 +4,6 @@ import {
   Flex,
   Heading,
   Text,
-  Link as ChakraLink,
   Icon,
   Divider,
   UnorderedList,
@@ -21,6 +20,7 @@ import unified from 'unified'
 import rehypeParse from 'rehype-parse'
 import rehypeReact from 'rehype-react'
 import rehypeSlug from 'rehype-slug'
+import { CustomLink } from '@/components/CustomLink'
 
 type Props = {
   post: PostType
@@ -34,9 +34,9 @@ const ContentH1 = (props: any) => (
     {...props}
   >
     <Flex align="center">
-      <ChakraLink href={`#${props.id}`} padding="2">
+      <CustomLink href={`#${props.id}`} options={{ padding: '2' }}>
         <Icon as={FaLink} color="gray.500" boxSize="4" />
-      </ChakraLink>
+      </CustomLink>
       {props.children}
     </Flex>
     <Divider />
@@ -51,9 +51,9 @@ const ContentH2 = (props: any) => (
     {...props}
   >
     <Flex align="center">
-      <ChakraLink href={`#${props.id}`} padding="2">
+      <CustomLink href={`#${props.id}`} options={{ padding: '2' }}>
         <Icon as={FaLink} color="gray.500" boxSize="4" />
-      </ChakraLink>
+      </CustomLink>
       {props.children}
     </Flex>
     <Divider />
@@ -68,9 +68,9 @@ const ContentH3 = (props: any) => (
     {...props}
   >
     <Flex align="center">
-      <ChakraLink href={`#${props.id}`} padding="2">
+      <CustomLink href={`#${props.id}`} options={{ padding: '2' }}>
         <Icon as={FaLink} color="gray.500" boxSize="4" />
-      </ChakraLink>
+      </CustomLink>
       {props.children}
     </Flex>
   </Heading>

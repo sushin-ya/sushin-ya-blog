@@ -1,7 +1,7 @@
 import { Container, Stack } from '@chakra-ui/react'
 import { Footer } from '../components/footer/Footer'
 import { Header } from '../components/header/Header'
-import { AboutMe } from './header/AboutMe'
+import { AboutMe } from './AboutMe'
 
 type Props = {
   children: React.ReactNode

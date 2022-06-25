@@ -11,6 +11,8 @@ type PostType = {
     url: string
   }
   content: string
+  readingTime: string
+  tea: string
 }
 
 export default PostType

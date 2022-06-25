@@ -9,7 +9,6 @@ import {
   UnorderedList,
   OrderedList,
   ListItem,
-  Link,
   Image,
   Code,
   Box,
@@ -115,11 +114,11 @@ const ContentParagraph = (props: any) => (
 )
 
 const ContentAnchor = (props: any) => (
-  <Link href={props.href as string}>
+  <CustomLink href={props.href as string}>
     <Text as="span" color="green.600">
       {props.children as React.ReactNode}
     </Text>
-  </Link>
+  </CustomLink>
 )
 
 const ContentImage = (props: any) => <Image src={props.src} alt={props.alt} />
@@ -144,6 +143,7 @@ export const PostDetail = ({ post }: Props) => {
     .use(rehypeReact, {
       createElement: React.createElement,
       components: {
+        h1: ContentH1,
         h2: ContentH2,
         h3: ContentH3,
         h4: ContentH4,

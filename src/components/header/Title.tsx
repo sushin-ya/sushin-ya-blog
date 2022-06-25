@@ -1,4 +1,5 @@
-import { Heading, Link, Stack, Text } from '@chakra-ui/react'
+import { Heading, Stack, Text } from '@chakra-ui/react'
+import { CustomLink } from '../CustomLink'
 
 export const Title = () => (
   <Stack
@@ -6,9 +7,9 @@ export const Title = () => (
     alignItems={['center', 'flex-end']}
     spacing={[1, 2]}
   >
-    <Link href={'/'}>
+    <CustomLink href={'/'}>
       <Heading fontSize="3xl">🍣🐈 Sushin-ya Blog</Heading>
-    </Link>
+    </CustomLink>
     <Text fontSize="xl" display={['none', 'block']}>
       |
     </Text>

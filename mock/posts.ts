@@ -13,6 +13,8 @@ export const posts: PostType[] = [
       url: '/assets/blog/dynamic-routing/cover.jpg',
     },
     content: 'content text',
+    readingTime: '3',
+    tea: '☕️',
   },
   {
     slug: 'dynamic-routing',
@@ -26,6 +28,8 @@ export const posts: PostType[] = [
       url: '/assets/blog/dynamic-routing/cover.jpg',
     },
     content: 'content text',
+    readingTime: '3',
+    tea: '☕️',
   },
   {
     slug: 'dynamic-routing',
@@ -39,5 +43,7 @@ export const posts: PostType[] = [
       url: '/assets/blog/dynamic-routing/cover.jpg',
     },
     content: 'content text',
+    readingTime: '3',
+    tea: '☕️',
   },
 ]

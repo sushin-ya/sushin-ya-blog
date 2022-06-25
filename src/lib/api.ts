@@ -1,6 +1,7 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import readingTime from 'reading-time'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -26,6 +27,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
     if (field === 'content') {
       items[field] = content
+    }
+    if (field === 'readingTime') {
+      items[field] = String(Math.ceil(readingTime(content).minutes))
+    }
+    if (field === 'tea') {
+      items[field] = '☕️'.repeat(Math.ceil(readingTime(content).minutes / 3))
     }
 
     if (typeof data[field] !== 'undefined') {

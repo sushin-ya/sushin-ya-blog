@@ -13,8 +13,8 @@ export const Post = ({ post }: Props) => (
     </Link>
     <HStack gap={2}>
       <Text>{dayjs(post.date).format('MMMM D, YYYY')}</Text>
-      <Text>🍵🍵🍵</Text>
-      <Text>5 min read</Text>
+      <Text>{post.tea}</Text>
+      <Text>{post.readingTime} min read</Text>
     </HStack>
     <Text>{post.excerpt}</Text>
   </Stack>

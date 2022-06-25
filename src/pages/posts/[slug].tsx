@@ -1,12 +1,8 @@
 import Layout from '@/components/Layout'
 import { PostDetail } from '@/components/posts/detail/PostDetail'
 import { getAllPosts, getPostBySlug } from 'lib/api'
+import markdownToHtml from 'lib/markdownToHtml'
 import PostType from '../../types/post'
-import remark from 'remark'
-import html from 'remark-html'
-import gfm from 'remark-gfm'
-// @ts-ignore
-import prism from 'remark-prism'
 
 type Props = {
   post: PostType
@@ -38,17 +34,13 @@ export async function getStaticProps({ params }: Params) {
     'ogImage',
     'coverImage',
   ])
-  const content = await remark()
-    .use(gfm)
-    .use(prism)
-    .use(html, { sanitize: false })
-    .process(post.content)
+  const content = await markdownToHtml(post.content)
 
   return {
     props: {
       post: {
         ...post,
-        content: content.toString(),
+        content: content,
       },
     },
   }

@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 
-import 'prismjs/themes/prism-okaidia.css'
+import 'prismjs/themes/prism-tomorrow.css'
 import theme from '../theme'
 import { AppProps } from 'next/app'
 

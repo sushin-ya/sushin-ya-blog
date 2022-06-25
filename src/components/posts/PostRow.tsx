@@ -5,7 +5,7 @@ import PostType from '../../types/post'
 type Props = {
   post: PostType
 }
-
+// TODO: Postに寄せる
 export const PostRow = ({ post }: Props) => (
   <Stack
     direction={['column', 'row']}

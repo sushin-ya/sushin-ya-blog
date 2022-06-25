@@ -6,7 +6,7 @@ import { PostRow } from './PostRow'
 type Props = {
   posts: PostType[]
 }
-
+// TODO: Postsに寄せる
 export const PostList = ({ posts }: Props) => {
   return (
     <List spacing={{ base: 4, md: 2 }}>

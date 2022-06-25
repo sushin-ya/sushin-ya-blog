@@ -61,7 +61,7 @@ const Index = ({}: Props) => (
         <Text>
           Henry Charles Bukowski, Kurt Vonnegut, John Winslow Irving, Martin
           Charles Scorsese, Paul Thomas Anderson, Kyoko Okazaki, Akira Toriyama,
-          Osamu Tezuka, Emil Mihai Cioran, Arthur Schopenhauer, and more...
+          Osamu Tezuka, Emil Mihai Cioran, Arthur Schopenhauer and more...
         </Text>
       </Stack>
       <Text>Thanks for reading!!! 👋</Text>

@@ -12,6 +12,7 @@ import {
   Image,
   Code,
   Box,
+  Stack,
 } from '@chakra-ui/react'
 import { FaLink } from 'react-icons/fa'
 import PostType from '../../../types/post'
@@ -160,9 +161,9 @@ export const PostDetail = ({ post }: Props) => {
     .processSync(post.content)
 
   return (
-    <>
+    <Stack spacing={6}>
       <Heading>{post.title}</Heading>
       <Box>{content.result as React.ReactNode}</Box>
-    </>
+    </Stack>
   )
 }

@@ -58,7 +58,7 @@ ZennやQiitaなどだと、なんとなく人の目が気になるので、個�
 ## 環境構築
 
 ### Next.jsの立ち上げ
-[ChakraUIのテンプレート](https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui)はデフォルトがTypeScript対応で、かつ最近Reactv18にも対応したみたいだった（着手時の７日前に更新あり）
+[ChakraUIのテンプレート](https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui)はデフォルトがTypeScript対応で、かつ最近Reactv18にも対応したみたいでラッキーでした（着手時の７日前に更新あり）
 
 そのまま使っていきましょう
 

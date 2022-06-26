@@ -247,8 +247,24 @@ resetCSS入ってるし、ダークモード対応してるし、いい感じで
 
 沼りすぎて、午前３時にuoooooとなってました
 
-いろいろ
+どこの動作がおかしいのか探ったところ、remark-prismの動作が怪しそうです
 
-Not compatible with remark-html v13.0.2 and above #265
+sanitizeフラグが悪さしてたみたいですね
+
+- [Not compatible with remark-html v13.0.2 and above #265](https://github.com/sergioramos/remark-prism/issues/265)
+
+### リンク問題
+リンクをクリックしたあとの遷移がやたら遅いな、と思っていたのですが、ChakraUIが提供しているLinkコンポーネントを使っているせいでした。
+
+Next.jsのLinkでラップして、propsも渡せるようにしてます
+
+- [【Next.js + Chakra UI】どちらのLinkを使えばいいの？](https://zenn.dev/micronn/articles/de136645d18f7d)
+- [自分の実装](https://github.com/sushin-ya/sushin-ya-blog/blob/main/src/components/CustomLink.tsx)
+
+### reading-timeと☕️
+ダン先生のブログにある、コーヒーとreading-timeの実装です
+ライブラリがあるので楽ちんでした
+
+- [実装](https://github.com/sushin-ya/sushin-ya-blog/pull/4/files)
 
 ## 最後に

@@ -63,7 +63,7 @@ Zenn や Qiita などだと、なんとなく人の目が気になるので、�
 
 そのまま使っていきましょう
 
-```sh
+```bash
 npx create-next-app sushinya-blog --example with-chakra-ui with-chakra-ui-app
 ```
 
@@ -78,7 +78,7 @@ npx create-next-app sushinya-blog --example with-chakra-ui with-chakra-ui-app
 }
 ```
 
-```sh
+```bash
 yarn lint
 ```
 
@@ -86,7 +86,7 @@ strict mode を選択しました
 
 Prettier も入れていきます
 
-```sh
+```bash
 yarn add --dev eslint-config-prettier
 ```
 
@@ -99,7 +99,7 @@ yarn add --dev eslint-config-prettier
 
 あとになって、使ってない import 文を ESLint でチェックしてほしくなったので、追加しました
 
-```sh
+```bash
 yarn add -D eslint-plugin-unused-imports
 ```
 
@@ -128,11 +128,11 @@ yarn add -D eslint-plugin-unused-imports
 
 正解のやり方がよくわからないのですが、[こちらの記事](https://blog.gaji.jp/2021/12/16/8810/)を眺めたりしつつ導入
 
-```sh
+```bash
 yarn add --dev husky lint-staged
 ```
 
-```sh
+```bash
 npx husky-init && yarn
 ```
 
@@ -169,7 +169,7 @@ module.exports = {
 
 [公式](https://github.com/conventional-changelog/commitlint)と[記事](https://qiita.com/PonPon3/items/333e1f6e899576ab4195#git-commit%E6%99%82%E3%81%AB%E8%87%AA%E5%8B%95%E3%81%A7eslint%E3%81%A8stylelint%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)を参考にしつつ
 
-```sh
+```bash
 yarn add --dev @commitlint/{cli,config-conventional}
 ```
 
@@ -187,7 +187,7 @@ yarn add --dev @commitlint/{cli,config-conventional}
   },
 ```
 
-```sh
+```bash
 npx husky add .husky/commit-msg
 ```
 

@@ -243,6 +243,12 @@ resetCSS入ってるし、ダークモード対応してるし、いい感じで
 - [個人ブログをつくりました（↗ agatan blog ↗）](https://blog.agatan.dev/posts/building-by-own-blog#%E6%8A%80%E8%A1%93)
 - [github](https://github.com/agatan/blog)
 
-これで安心、
+これで安心、と思いきや、なぜかシンタックスハイライトがうまくいかない
+
+沼りすぎて、午前３時にuoooooとなってました
+
+いろいろ
+
+Not compatible with remark-html v13.0.2 and above #265
 
 ## 最後に

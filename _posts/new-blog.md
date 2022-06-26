@@ -18,18 +18,18 @@ ogImage:
 
 気軽にアウトプットができる場所がほしいな、と思ったので作りました
 
-ZennやQiitaなどだと、なんとなく人の目が気になるので、個人ブログなら好きなこと書いても許されるかなと...
+Zenn や Qiita などだと、なんとなく人の目が気になるので、個人ブログなら好きなこと書いても許されるかなと...
 
-あと、Next.jsやChakraUIを使ってなにか作りたかったというのもあります
+あと、Next.js や ChakraUI を使ってなにか作りたかったというのもあります
 
-怠け者なのでサボらないようにしたい...この記事も書き始めるまで一日遅延しました🤔
+怠け者なのでサボらないようにしたい...この記事も書き始めるまで一日遅延しました 🤔
 
 ## 開発環境
 
 - MacBook Pro (13-inch, 2020)
-  - 業務ではM1使ってますが、私用は普通の2020年モデルです
+  - 業務では M1 使ってますが、私用は普通の 2020 年モデルです
 - VSCode
-  - かっこいいからVim使ってみたいけどVSCodeが覇権すぎる
+  - かっこいいから Vim 使ってみたいけど VSCode が覇権すぎる
 
 ## 技術選定
 
@@ -38,11 +38,11 @@ ZennやQiitaなどだと、なんとなく人の目が気になるので、個�
 - TypeScript
   - 最高ですね。型に強くなりてえ...🤪
 - Chakra UI
-  - 業務だとUIライブラリは使わず、CSS Modulesで素のまま書くことが多いです
-  - 大昔にBootstrapやMaterialUI(MUIになる前）は使ったことあります
+  - 業務だと UI ライブラリは使わず、CSS Modules で素のまま書くことが多いです
+  - 大昔に Bootstrap や MaterialUI(MUI になる前）は使ったことあります
 - eslint
 - prettier
-  - 開発では必須ですね。けど設定が秘伝のタレ化しやすい気が...。Next.jsは幸い色々入れてくれてるので考えなくてよいですね
+  - 開発では必須ですね。けど設定が秘伝のタレ化しやすい気が...。Next.js は幸い色々入れてくれてるので考えなくてよいですね
 - husky/lint-stage
 - commit lint
   - 案件で入ってる事が多いので、一応
@@ -57,8 +57,9 @@ ZennやQiitaなどだと、なんとなく人の目が気になるので、個�
 
 ## 環境構築
 
-### Next.jsの立ち上げ
-[ChakraUIのテンプレート](https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui)はデフォルトがTypeScript対応で、かつ最近Reactv18にも対応したみたいでラッキーでした（着手時の７日前に更新あり）
+### Next.js の立ち上げ
+
+[ChakraUI のテンプレート](https://github.com/vercel/next.js/tree/canary/examples/with-chakra-ui)はデフォルトが TypeScript 対応で、かつ最近 Reactv18 にも対応したみたいでラッキーでした（着手時の７日前に更新あり）
 
 そのまま使っていきましょう
 
@@ -66,7 +67,8 @@ ZennやQiitaなどだと、なんとなく人の目が気になるので、個�
 npx create-next-app sushinya-blog --example with-chakra-ui with-chakra-ui-app
 ```
 
-### ESLintとPrettier
+### ESLint と Prettier
+
 [公式ドキュメント](https://nextjs.org/docs/basic-features/eslint)に習って入れていきます
 
 ```json
@@ -80,22 +82,22 @@ npx create-next-app sushinya-blog --example with-chakra-ui with-chakra-ui-app
 yarn lint
 ```
 
-strict modeを選択しました
+strict mode を選択しました
 
-Prettierも入れていきます
+Prettier も入れていきます
 
 ```sh
 yarn add --dev eslint-config-prettier
 ```
 
-```json:
+```json
 // .eslintrc.json
 {
   "extends": ["next/core-web-vitals", "prettier"]
 }
 ```
 
-あとになって、使ってないimport文をESLintでチェックしてほしくなったので、追加しました
+あとになって、使ってない import 文を ESLint でチェックしてほしくなったので、追加しました
 
 ```sh
 yarn add -D eslint-plugin-unused-imports
@@ -120,7 +122,6 @@ yarn add -D eslint-plugin-unused-imports
     ]
   }
 }
-
 ```
 
 ### husky/lint-stage
@@ -135,7 +136,7 @@ yarn add --dev husky lint-staged
 npx husky-init && yarn
 ```
 
-```sh
+```bash
 // .husky/pre-commit
 
 #!/usr/bin/env sh
@@ -144,9 +145,9 @@ npx husky-init && yarn
 yarn lint-staged
 ```
 
-husky-initがいい感じにやってくれるらしい
+husky-init がいい感じにやってくれるらしい
 
-lintstageの設定も[公式ドキュメント](https://nextjs.org/docs/basic-features/eslint#lint-staged)を見たような見てないような
+lintstage の設定も[公式ドキュメント](https://nextjs.org/docs/basic-features/eslint#lint-staged)を見たような見てないような
 
 ```js
 // .lintstagedrc.js
@@ -165,6 +166,7 @@ module.exports = {
 動いてるっぽいのでヨシ！
 
 ### commit lint
+
 [公式](https://github.com/conventional-changelog/commitlint)と[記事](https://qiita.com/PonPon3/items/333e1f6e899576ab4195#git-commit%E6%99%82%E3%81%AB%E8%87%AA%E5%8B%95%E3%81%A7eslint%E3%81%A8stylelint%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)を参考にしつつ
 
 ```sh
@@ -189,7 +191,7 @@ yarn add --dev @commitlint/{cli,config-conventional}
 npx husky add .husky/commit-msg
 ```
 
-```sh
+```bash
 // commit-msg
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
@@ -199,9 +201,9 @@ yarn commitmsg
 
 よくわかってないですが、動いてるのでセットアップ終了です笑
 
-## ChakraUI何もわからん
+## ChakraUI 何もわからん
 
-MaterialUI使ったことあるし、ノリで行けるやろと思ってたら、何もわかりませんでした
+MaterialUI 使ったことあるし、ノリで行けるやろと思ってたら、何もわかりませんでした
 
 いくつかコンテンツを見て、学習しました
 
@@ -209,11 +211,11 @@ MaterialUI使ったことあるし、ノリで行けるやろと思ってたら�
 
 - [公式ドキュメント](https://chakra-ui.com/)
 - [公式の動画コンテンツ](https://egghead.io/lessons/react-install-and-setup-chakra-ui-in-a-react-project)
-- [Chakra UIの歩き方 & Tips集](https://zenn.dev/terrierscript/books/2021-05-chakra-ui)
+- [Chakra UI の歩き方 & Tips 集](https://zenn.dev/terrierscript/books/2021-05-chakra-ui)
 
-resetCSS入ってるし、ダークモード対応してるし、いい感じです
+resetCSS 入ってるし、ダークモード対応してるし、いい感じです
 
-ひとまず、Stackの使い方と、属性の指定の仕方がわかれば、ノリでいけそうです
+ひとまず、Stack の使い方と、属性の指定の仕方がわかれば、ノリでいけそうです
 
 ## 実装
 
@@ -222,22 +224,22 @@ resetCSS入ってるし、ダークモード対応してるし、いい感じで
 ブログのデザインは今回作らなかったので、いくつか参考にしました
 
 - [Overreacted](https://overreacted.io/)
-  - Reactコアチームのダン先生。twitterも見てます👀
-- [κeenのHappy Hacκing Blog | Lispエイリアンの狂想曲](https://keens.github.io/)
-  - ML系の記事とか、コンパイラとか、Rustとかの方（？）
-  - 昔、ちょっとCommon Lispに興味があったときにたどり着いたような気がする（未だに興味はあるけど、別に書いたことはない）
+  - React コアチームのダン先生。twitter も見てます 👀
+- [κeen の Happy Hacκing Blog | Lisp エイリアンの狂想曲](https://keens.github.io/)
+  - ML 系の記事とか、コンパイラとか、Rust とかの方（？）
+  - 昔、ちょっと Common Lisp に興味があったときにたどり着いたような気がする（未だに興味はあるけど、別に書いたことはない）
 - [Craftz.dog](https://www.craftz.dog/)
-  - おしゃれ。Youtube見てます。このままコピーしたサイトつくりたい
+  - おしゃれ。Youtube 見てます。このままコピーしたサイトつくりたい
 
 あとは、ゴリゴリ実装！
 
-[公式のsblog-starter-typescript](https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript)でいけるやろ！と思ってました
+[公式の sblog-starter-typescript](https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript)でいけるやろ！と思ってました
 
 ### マークダウン変換
 
 ここで、ハマりました。
 
-シンプルなhtmlを吐き出す事はできるけど、どうやってChakraUIのコンポーネントにするんや...と頭を抱えました
+シンプルな html を吐き出す事はできるけど、どうやって ChakraUI のコンポーネントにするんや...と頭を抱えました
 
 [chakra-ui-markdown-renderer](https://github.com/mustaphaturhan/chakra-ui-markdown-renderer)というライブラリがあったのですが、動かん...
 
@@ -248,26 +250,26 @@ resetCSS入ってるし、ダークモード対応してるし、いい感じで
 
 これで安心、と思いきや、なぜかシンタックスハイライトがうまくいかない
 
-沼りすぎて、午前３時にuooooo😭となってました
+沼りすぎて、午前３時に uooooo😭 となってました
 
-どこの動作がおかしいのか探ったところ、remark-prismの動作が怪しそうです
+どこの動作がおかしいのか探ったところ、remark-prism の動作が怪しそうです
 
-sanitizeフラグが悪さしてたみたいですね
+sanitize フラグが悪さしてたみたいですね
 
 - [Not compatible with remark-html v13.0.2 and above #265](https://github.com/sergioramos/remark-prism/issues/265)
 
 ### リンク問題
 
-リンクをクリックしたあとの遷移がやたら遅いな、と思っていたのですが、ChakraUIが提供しているLinkコンポーネントを使っているせいでした。
+リンクをクリックしたあとの遷移がやたら遅いな、と思っていたのですが、ChakraUI が提供している Link コンポーネントを使っているせいでした。
 
-Next.jsのLinkでラップして、propsも渡せるようにしてます
+Next.js の Link でラップして、props も渡せるようにしてます
 
-- [【Next.js + Chakra UI】どちらのLinkを使えばいいの？](https://zenn.dev/micronn/articles/de136645d18f7d)
+- [【Next.js + Chakra UI】どちらの Link を使えばいいの？](https://zenn.dev/micronn/articles/de136645d18f7d)
 - [自分の実装](https://github.com/sushin-ya/sushin-ya-blog/blob/main/src/components/CustomLink.tsx)
 
-### reading-timeと☕️
+### reading-time と ☕️
 
-ダン先生のブログにある、コーヒーとreading-timeの実装です
+ダン先生のブログにある、コーヒーと reading-time の実装です
 
 ライブラリがあるので楽ちんでした
 
@@ -281,7 +283,7 @@ Next.jsのLinkでラップして、propsも渡せるようにしてます
 
 ## デプロイ
 
-Vercelに以前作成したアカウントがあったので、このリポジトリをVercelから見れるように権限設定すれば即完了でした
+Vercel に以前作成したアカウントがあったので、このリポジトリを Vercel から見れるように権限設定すれば即完了でした
 
 [公式](https://vercel.com)を参照してください
 
@@ -291,15 +293,15 @@ Vercelに以前作成したアカウントがあったので、このリポジ�
 
 ひとまず、１．５人日くらいで実装したので、積み残しが結構あります
 
-あとでIssue立てて対応しようかな
+あとで Issue 立てて対応しようかな
 
-- faviconの設定
-　　- [絵文字をファビコンとして表示する簡単な方法](https://zenn.dev/catnose99/articles/3d2f439e8ed161)を参考にする
-- SEOとOGPとか？よくわからん
-- twitter/codepenの埋め込みコンポーネントつくる
-- actionsでlintチェックさせる
+- favicon の設定
+  　　- [絵文字をファビコンとして表示する簡単な方法](https://zenn.dev/catnose99/articles/3d2f439e8ed161)を参考にする
+- SEO と OGP とか？よくわからん
+- twitter/codepen の埋め込みコンポーネントつくる
+- actions で lint チェックさせる
 - コンポーネントの共通化・整理
-- anyにしてる型をなおす
+- any にしてる型をなおす
 - ドメイン取得？（ポートフォリオサイト作ったら取得しようかな）
 - などなど...
 
@@ -311,30 +313,28 @@ Vercelに以前作成したアカウントがあったので、このリポジ�
 
 なので、スモールスタートして、ひとまず公開することを目標としました
 
-目標達成できてよかったです😎
+目標達成できてよかったです 😎
 
-デザインのことはほぼ考えず、ChakraUIに任せたので、実装に集中できたのも良かったです（カラーテーマがデフォのまま笑）
-
+デザインのことはほぼ考えず、ChakraUI に任せたので、実装に集中できたのも良かったです（カラーテーマがデフォのまま笑）
 
 いま一点困っているのが、マークダウンの記事をどこで書くか問題です
 
-VSCodeをわざわざ立ち上げるのもなーと思い、Github上で直接mdファイルを作って書いています
+VSCode をわざわざ立ち上げるのもなーと思い、Github 上で直接 md ファイルを作って書いています
 
 それなりに快適なのですが、定期的に改行すると前の行がコピーされるバグ？のようなものに見舞われて、ちょっとストレスです
 
-やっぱVSCodeで書くかな...なんとなくイヤなんですよね笑
+やっぱ VSCode で書くかな...なんとなくイヤなんですよね笑
 
-できれば、ブログサービスみたいにブラウザで書きたいな（最初、データソースとして、NotionやmicroCMSも検討したんですけどね...今後の課題です）
+できれば、ブログサービスみたいにブラウザで書きたいな（最初、データソースとして、Notion や microCMS も検討したんですけどね...今後の課題です）
 
-
-ひとまず、完成したので大いに満足です😎
+ひとまず、完成したので大いに満足です 😎
 
 週に一本は記事を書いていこう
 
-今回は、Notionにコードをペタペタ貼っていたのでサクッと書けました👋
+今回は、Notion にコードをペタペタ貼っていたのでサクッと書けました 👋
 
 ## 追記
 
-読み返していて気がついたのですが、シンタックスハイライトの中で使ってるアンパサンドとかがHTMLの特殊文字になってますね
+読み返していて気がついたのですが、シンタックスハイライトの中で使ってるアンパサンドとかが HTML の特殊文字になってますね
 
-たぶんremarkが関係してるんだろうな..後で直します😢
+たぶん remark が関係してるんだろうな..後で直します 😢

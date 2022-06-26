@@ -268,13 +268,14 @@ Next.jsのLinkでラップして、propsも渡せるようにしてます
 ### reading-timeと☕️
 
 ダン先生のブログにある、コーヒーとreading-timeの実装です
+
 ライブラリがあるので楽ちんでした
 
 - [実装](https://github.com/sushin-ya/sushin-ya-blog/pull/4/files)
 
 ### 初期値をダークテーマにした
 
-した
+しました
 
 - [Default Theme](https://chakra-ui.com/docs/styled-system/theme#config)
 

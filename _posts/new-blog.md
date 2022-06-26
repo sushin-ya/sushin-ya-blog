@@ -46,7 +46,9 @@ ZennやQiitaなどだと、なんとなく人の目が気になるので、個�
 - dayjs
   - 日付部分の表示用
 - remark/rehype
-  - マークダウンに変換するやつ
+  - マークダウンに変換する
+- reading-time
+  - 記事を読む時間を計算してくれる
 - Vercel
   - 安定のデプロイ先
 
@@ -203,10 +205,44 @@ MaterialUI使ったことあるし、ノリで行けるやろと思ってたら�
 （本当は、一回ノリでコンポーネント作ったのですが、カオスが生まれました）
 
 - [公式ドキュメント](https://chakra-ui.com/)
+- [公式の動画コンテンツ](https://egghead.io/lessons/react-install-and-setup-chakra-ui-in-a-react-project)
+- [Chakra UIの歩き方 & Tips集](https://zenn.dev/terrierscript/books/2021-05-chakra-ui)
 
+resetCSS入ってるし、ダークモード対応してるし、いい感じです
+
+ひとまず、Stackの使い方と、属性の指定の仕方がわかれば、ノリでいけそうです
 
 ## 実装
 
-## 困ったこと
+### デザイン
+
+ブログのデザインは今回作らなかったので、いくつか参考にしました
+
+- [Overreacted](https://overreacted.io/)
+  - Reactコアチームのダン先生。twitterも見てます👀
+- [κeenのHappy Hacκing Blog | Lispエイリアンの狂想曲](https://keens.github.io/)
+  - ML系の記事とか、コンパイラとか、Rustとかの方（？）
+  - 昔、ちょっとCommon Lispに興味があったときにたどり着いたような気がする（未だに興味はあるけど、別に書いたことはない）
+- [Craftz.dog](https://www.craftz.dog/)
+  - おしゃれ。Youtube見てます。このままコピーしたサイトつくりたい
+
+あとは、ゴリゴリ実装！
+
+[公式のsblog-starter-typescript](https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript)でいけるやろ！と思ってました
+
+### マークダウン変換
+
+ここで、３時くらいにハマりました。
+
+シンプルなhtmlを吐き出す事はできるけど、どうやってChakraUIのコンポーネントにするわけ？と思いました
+
+[chakra-ui-markdown-renderer](https://github.com/mustaphaturhan/chakra-ui-markdown-renderer)というライブラリがあったのですが、動かん...
+
+幸い、ブログに記事を書いている方がいたので、参考にさせていただきました
+
+- [個人ブログをつくりました（↗ agatan blog ↗）](https://blog.agatan.dev/posts/building-by-own-blog#%E6%8A%80%E8%A1%93)
+- [github](https://github.com/agatan/blog)
+
+これで安心、
 
 ## 最後に

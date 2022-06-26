@@ -237,7 +237,7 @@ resetCSS入ってるし、ダークモード対応してるし、いい感じで
 
 ここで、３時くらいにハマりました。
 
-シンプルなhtmlを吐き出す事はできるけど、どうやってChakraUIのコンポーネントにするわけ？と思いました
+シンプルなhtmlを吐き出す事はできるけど、どうやってChakraUIのコンポーネントにするんや...と頭を抱えました
 
 [chakra-ui-markdown-renderer](https://github.com/mustaphaturhan/chakra-ui-markdown-renderer)というライブラリがあったのですが、動かん...
 
@@ -327,3 +327,5 @@ VSCodeをわざわざ立ち上げるのもなーと思い、Github上で直接md
 ひとまず、完成したので大いに満足です😎
 
 週に一本は記事を書いていこう
+
+今回は、Notionにコードをペタペタ貼っていたのでサクッと書けました👋

@@ -1,5 +1,5 @@
 ---
-title: '上半期？読んだ本一行感想'
+title: '2022年上半期？読んだ本一行感想'
 excerpt: '上半期？に読んだ技術書の感想です'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2022-07-03T19:11:07.322Z'
